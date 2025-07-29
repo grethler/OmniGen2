@@ -28,6 +28,12 @@ def parse_args() -> argparse.Namespace:
         help="Path to model checkpoint.",
     )
     parser.add_argument(
+        "--scheduler", 
+        type=str, 
+        default=None, 
+        help='Scheduler for sampling'
+    )
+    parser.add_argument(
         "--num_inference_step",
         type=int,
         default=50,
